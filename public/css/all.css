@@ -8857,6 +8857,10 @@ h1, h2, h3 {
   color: #BD1522;
 }
 
+body {
+    font-family: 'Work Sans', sans-serif; font-size: 16px;
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
