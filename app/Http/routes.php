@@ -25,6 +25,9 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
-        return view('content/index');
+        $message = '';
+        return view('content/index', compact('message'));
     });
+
+    Route::post('/callback', 'GeneralController@callback');
 });
