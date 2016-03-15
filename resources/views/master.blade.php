@@ -13,11 +13,11 @@
 <!--<![endif]-->
 <head>
 	<meta charset="UTF-8" />
-    <meta name="description" content="Offering a high-quality, timely, professional IT support service to small businesses in Canberra and Queanbeyan."/>
+    <meta name="description" content="Offering a high-quality, timely, professional IT support service to small to medium sized businesses in Canberra and Queanbeyan."/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="High-quality IT support services"/>
-    <meta property="og:description" content="Offering a high-quality, timely, professional IT support service to small businesses in Canberra and Queanbeyan."/>
+    <meta property="og:description" content="Offering a high-quality, timely, professional IT support service to small to medium sized businesses in Canberra and Queanbeyan."/>
     <meta property="og:url" content="{{ url('') }}"/>
     <meta property="og:site_name" content="Computer Whiz - Canberra"/>
     <meta property="og:image" content="{{ url('/images/logo.jpg') }}"/>
