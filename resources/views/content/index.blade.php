@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8">
         Hi, I'm Derek Gillett and I run Computer Whiz - Canberra. My goal is to provide a high-quality,
-        timely, professional service to small businesses in Canberra and Queanbeyan.<Br>
+        timely, professional IT support services for small to medium sized businesses in Canberra and Queanbeyan.<Br>
         <br>
         High-quality, because I have over 20 years experience in the I.T. field. I've run I.T. support
         businesses both locally and interstate as well as worked as an independent consultant, and with
@@ -67,10 +67,11 @@
         <p>
             Book online: <a target="_blank" href="http://computerwhiz.simplybook.me/">http://computerwhiz.simplybook.me</a>
         </p>
+        <a name="callback"></a>
         <p>
             Request a callback:
 
-            @if ($message == '')
+            @if (!session()->has('message'))
             <form class="form-horizontal" action="/callback" method="post">
                 {{ csrf_field() }}
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -135,7 +136,7 @@
             </form>
             @else
             <div class="alert alert-success" role="alert">
-              {{ $message }}
+              {{ session('message') }}
             </div>
             @endif
         </p>

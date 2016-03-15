@@ -10,11 +10,17 @@ class GeneralController extends Controller
 {
     public function callback(Request $request)
     {
-        $this->validate($request, [
+        $validator = \Validator::make($request->all(), [
             'phone_number' => 'required|regex:/^[(\d][\d- )]{5,13}$/',
             'message' => 'string',
             'name' => 'string',
         ]);
+
+        if ($validator->fails()) {
+            return redirect('/#callback')
+                    ->withErrors($validator)
+                    ->withInput();
+        }
 
         $message = 'Thanks for the message'.($request->name != '' ? ' '.$request->name : '').
             '. We\'ll call you '.($request->best_time != '' ? 'at '.$request->best_time : 'shortly');
@@ -24,6 +30,6 @@ class GeneralController extends Controller
             $m->to('mail@computerwhiz.com.au', 'Derek')
               ->subject('Message from '.$request->name == '' ? 'anonymous' : $request->name);
         });
-        return view('content.index', compact('message'));
+        return redirect('/#callback')->with('message', $message);
     }
 }
