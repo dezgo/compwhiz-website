@@ -29,5 +29,9 @@ Route::group(['middleware' => ['web']], function () {
         return view('content/index', compact('message'));
     });
 
+    // process customer contact request
     Route::post('/callback', 'GeneralController@callback');
+
+    Route::get('/customerinfo', 'GeneralController@customerinfo');
+    Route::post('/customerinfo', 'GeneralController@customerinfo_store');
 });

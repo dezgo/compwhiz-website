@@ -32,4 +32,25 @@ class GeneralController extends Controller
         });
         return redirect('/#callback')->with('message', $message);
     }
+
+    public function customerinfo()
+    {
+        return view('content.customerinfo');
+    }
+
+    public function customerinfo_store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|email',
+        ]);
+// dd($request);
+        $message = 'Thanks for submitting your information';
+        Mail::send('emails.customerinfo', ['request' => $request], function ($m) use ($request) {
+            $m->from($request->email, $request->name);
+            $m->to('mail@computerwhiz.com.au', 'Derek')
+              ->subject('Customer Info for '.$request->name);
+        });
+        return redirect('/customerinfo')->with('message', $message);
+    }
 }
