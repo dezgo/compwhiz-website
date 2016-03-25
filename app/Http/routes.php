@@ -29,6 +29,10 @@ Route::group(['middleware' => ['web']], function () {
         return view('content/index', compact('message'));
     });
 
+    Route::get('/insightly', function () {
+        return view('content/insightly');
+    });
+
     // process customer contact request
     Route::post('/callback', 'GeneralController@callback');
 

@@ -22,13 +22,15 @@ class GeneralController extends Controller
                     ->withInput();
         }
 
-        $message = 'Thanks for the message'.($request->name != '' ? ' '.$request->name : '').
-            '. We\'ll call you '.($request->best_time != '' ? 'at '.$request->best_time : 'shortly');
+        $message = trans('homepage.success', [
+                    'name' => ($request->name != '' ? ' '.$request->name : ''),
+                    'best_time' => ($request->best_time != '' ? 'at '.$request->best_time : 'shortly')
+                ]);
 
         Mail::send('emails.contact', ['request' => $request], function ($m) use ($request) {
-            $m->from('web@computerwhiz.com.au', 'CW Website');
-            $m->to('mail@computerwhiz.com.au', 'Derek')
-              ->subject('Message from '.$request->name == '' ? 'anonymous' : $request->name);
+            $m->from('mail@computerwhiz.com.au', 'Computer Whiz Mail');
+            $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
+              ->subject('Message from '.($request->name == '' ? 'anonymous' : $request->name));
         });
         return redirect('/#callback')->with('message', $message);
     }
@@ -44,12 +46,12 @@ class GeneralController extends Controller
             'name' => 'required|string',
             'email' => 'required|email',
         ]);
-// dd($request);
-        $message = 'Thanks for submitting your information';
+
+        $message = trans('customerinfo.success', ['name' => $request->name]);
         Mail::send('emails.customerinfo', ['request' => $request], function ($m) use ($request) {
             $m->from($request->email, $request->name);
-            $m->to('mail@computerwhiz.com.au', 'Derek')
-              ->subject('Customer Info for '.$request->name);
+            $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
+              ->subject(trans('customerinfo.email-subject', ['name' => $request->name]));
         });
         return redirect('/customerinfo')->with('message', $message);
     }

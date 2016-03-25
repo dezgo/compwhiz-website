@@ -2,6 +2,10 @@
 <hr />
 <table>
     <tr>
+        <td>Email:</td>
+        <td>{{ $request->email }}</td>
+    </tr>
+    <tr>
         <td>Device:</td>
         <td>{{ $request->device }}</td>
     </tr>

@@ -29,6 +29,7 @@
             Aging technology, but unsure what to do? A business of any size needs lots of I.T. support. Things like:
         </p>
             <ul>
+                <li>A secure, functional website</li>
                 <li>Up-to-date antivirus software</li>
                 <li>Advice / assistance when purchasing new hardware</li>
                 <li>A robust disaster recovery plan</li>
@@ -36,7 +37,7 @@
                 <li>Malware / virus removal</li>
                 <li>Regular PC/network health checks</li>
                 <li>A high quality backup system</li>
-                <li>Simple remote support for quick resolution to simple issues</li>
+                <li>Simple remote support for quick resolution of simple issues</li>
             </ul>
         <p>
             Plus, you may have a lot of different types of hardware, such as:
@@ -46,6 +47,66 @@
                 <li>Mobiles / Tablets (iOS and Android)</li>
                 <li>Servers / network infrastructure</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Remote Support</h2>
+            <p>
+                Want support now? Run the <a target="qs" href="http://get.teamviewer.com/computerwhiz_qs">
+                    Computer Whiz - Canberra Quick Support module</a>, then give us a call
+                    and we can login and take a look.
+            </p>
+            <p id='HelpIE' style="visibility:hidden;display:none">
+                When you click the above link, you'll see a message like this appear at the bottom of your screen<br /><br />
+                <img src='/images/ie11-1.png' /><br /><br />
+                Click run and wait for it to finish. Next you'll see a message like this<br /><br />
+                <img src='/images/ie11-2.png' /><br /><br />
+                Click 'Yes' and you should then see the Quick Support module<br /><br />
+                <img src='/images/teamviewer_qs_win.png' /><br /><br />
+                After a few seconds, the session code and your name boxes will be filled in<br />
+            </p>
+            <p id='HelpChrome' style="visibility:hidden;display:none">
+                When you click the above link, you'll see a message like this appear at the bottom of your screen<br /><br />
+                <img src='/images/chrome-1.png' /><br /><br />
+                Click run and wait for it to finish. Next you'll see a message like this<br /><br />
+                <img src='/images/chrome-2.png' /><br /><br />
+                Click 'Yes' and you should then see the Quick Support module<br /><br />
+                <img src='/images/teamviewer_qs_win.png' /><br /><br />
+                After a few seconds, the session code and your name boxes will be filled in<br />
+            </p>
+            <p id='HelpEdge' style="visibility:hidden;display:none">
+                When you click the above link, you'll see a message like this appear at the bottom of your screen<br /><br />
+                <img src='/images/edge-1.png' /><br /><br />
+                Once the download has finished, you'll see a message like this<br /><br />
+                <img src='/images/edge-2.png' /><br /><br />
+                Click 'Run' and you should then see the Quick Support module<br /><br />
+                <img src='/images/teamviewer_qs_win.png' /><br /><br />
+                After a few seconds, the session code and your name boxes will be filled in<br />
+            </p>
+            <p id='HelpFirefox' style="visibility:hidden;display:none">
+                When you click the above link, you'll see this message asking what to do<br /><br />
+                <img src='/images/firefox-1.png' /><br /><br />
+                Click 'Save File'. You'll then see a progress icon at the top-right corner of your screen. If
+                you click it, you'll see the support module downloading<br /><br />
+                <img src='/images/firefox-2.png' /><br /><br />
+                Once finished, that progress icon will change to a down-arrow and flash blue.<br /><br />
+                <img src='/images/firefox-3.png' /><br /><br />
+                Click the filename above to run it.<br /><br />
+                <img src='/images/firefox-4.png' /><br /><br />
+                Confirm that you want to run it by clicking 'Run', and you should see the
+                remote support module appear (please be patient, it can take some time).<br /><br />
+                <img src='/images/teamviewer_qs_win.png' /><br /><br />
+                After a few seconds, the session code and your name boxes will be filled in<br />
+            </p>
+            <p>
+                If you have any trouble, we might want to know what browser you're using
+                (hint: it's <span id='browser_version'></span>)
+            </p>
+            <iframe style="visibility:hidden;display:none" name="qs"></iframe>
+        </div>
+        <div class="col-md-4">
         </div>
     </div>
 
@@ -100,7 +161,7 @@
                 <label for="best_time" class="col-sm-2 control-label">Best time</label>
                 <div class="col-sm-8">
                     <select class="form-control" name="best_time" id="best_time">
-                        <option></option>
+                        <option value=""></option>
                         <option{{ old('best_time') == '8:00 AM' ? ' selected' : '' }} value="8:00 AM">8:00 AM</option>
                         <option{{ old('best_time') == '9:00 AM' ? ' selected' : '' }} value="9:00 AM">9:00 AM</option>
                         <option{{ old('best_time') == '10:00 AM' ? ' selected' : '' }} value="10:00 AM">10:00 AM</option>
@@ -130,7 +191,7 @@
               </div>
               <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-8">
-                      <button type="submit" class="btn btn-default">Request</button>
+                      <button id="btnSubmit" type="submit" class="btn btn-default">Request</button>
                   </div>
               </div>
             </form>
@@ -145,4 +206,83 @@
             <img width="320" height="320" src="{{asset('/images/call-center-1027585_640.jpg')}}">
         </div>
     </div>
+
+    <!-- <form class="form-horizontal"  name="insightly_web_to_lead" action="https://compwhiz.insight.ly/WebToLead/Create" method="post">
+        <input type="hidden" name="formId" value="ing2N5NnCbpS+aW0FxIRVQ=="/>
+        <input type="hidden" id="insightly_ResponsibleUser" name="ResponsibleUser" value="529776"/><br/>
+        <input type="hidden" id="insightly_LeadSource" name="LeadSource" value="898205"/><br/>
+
+        <div class="form-group">
+            <label for="insightly_firstName" class="col-sm-2 control-label">First Name: </label>
+            <div class="col-sm-8">
+                <input class="form-control" id="insightly_FirstName" name="FirstName" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="insightly_lastName" class="col-sm-2 control-label">Last Name: </label>
+            <div class="col-sm-8">
+                <input class="form-control" id="insightly_LastName" name="LastName" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="insightly_organization" class="col-sm-2 control-label">Organization: </label>
+            <div class="col-sm-8">
+                <input class="form-control" id="insightly_Organization" name="OrganizationName" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email: </label>
+            <div class="col-sm-8">
+                <input class="form-control" id="insightly_Email" name="email" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone" class="col-sm-2 control-label">Phone: </label>
+            <div class="col-sm-8">
+                <input class="form-control" id="insightly_Phone" name="phone" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone" class="col-sm-2 control-label">Message: </label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="Description" id="insightly_Description" cols='30' rows='3'></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-8">
+                <input class="btn btn-default" type="submit" value="Submit"/>
+            </div>
+        </div>
+    </form> -->
+
+@stop
+
+@section('footer')
+<script language="javascript" src="js/bowser.js"></script>
+<script language="javascript">
+    var browser_version = bowser.name + ' version ' + bowser.version;
+    document.getElementById('browser_version').innerHTML = browser_version;
+    if (bowser.name == 'Internet Explorer') {
+        document.getElementById('HelpIE').style.display = '';
+        document.getElementById('HelpIE').style.visibility = '';
+    }
+    else if (bowser.name == 'Chrome') {
+        document.getElementById('HelpChrome').style.display = '';
+        document.getElementById('HelpChrome').style.visibility = '';
+    }
+    else if (bowser.name == 'Microsoft Edge') {
+        document.getElementById('HelpEdge').style.display = '';
+        document.getElementById('HelpEdge').style.visibility = '';
+    }
+    else if (bowser.name == 'Firefox') {
+        document.getElementById('HelpFirefox').style.display = '';
+        document.getElementById('HelpFirefox').style.visibility = '';
+    }
+</script>
 @stop
