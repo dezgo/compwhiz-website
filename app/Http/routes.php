@@ -33,6 +33,10 @@ Route::group(['middleware' => ['web']], function () {
         return view('content/insightly');
     });
 
+    Route::get('/remote-support-help', function () {
+        return view('content/remote-support-help');
+    });
+
     // process customer contact request
     Route::post('/callback', 'GeneralController@callback');
 
