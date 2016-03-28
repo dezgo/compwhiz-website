@@ -1,6 +1,7 @@
 @extends('master')
 
 @section('content')
+<img src='/images/logo.png' />
 <h1>Running the Quick Support module</h1>
 <p>
 Step 1: Click the below link:<br />

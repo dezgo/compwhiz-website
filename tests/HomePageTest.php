@@ -15,9 +15,17 @@ class HomePageText extends TestCase
     public function testHomePage()
     {
         $this->visit('/')
+                 ->see('Mission')
                  ->see('Services')
                  ->see('Contact')
-                 ->see(url('/images/logo.jpg'));
+                 ->see('/images/home_buttons.png');
+    }
+
+    public function testRequestCallback_invalid()
+    {
+        $this->visit('/')
+             ->press('btnSubmit')
+             ->see(trans('validation.required', ['attribute' => 'phone number']));
     }
 
     public function testRequestCallback()
