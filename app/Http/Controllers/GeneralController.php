@@ -11,9 +11,10 @@ class GeneralController extends Controller
     public function callback(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'phone_number' => 'required|regex:/^[(\d][\d- )]{5,13}$/',
+            'phone_number' => 'required_without:email|regex:/^[(\d][\d- )]{5,13}$/',
             'message' => 'string',
-            'name' => 'string',
+            'name' => 'required|string',
+            'email' => 'email|required_without:phone_number',
         ]);
 
         if ($validator->fails()) {

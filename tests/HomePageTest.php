@@ -25,7 +25,9 @@ class HomePageText extends TestCase
     {
         $this->visit('/')
              ->press('btnSubmit')
-             ->see(trans('validation.required', ['attribute' => 'phone number']));
+             ->see(trans('validation.required_without', ['attribute' => 'phone number', 'values' => 'email']))
+             ->see(trans('validation.required_without', ['attribute' => 'email', 'values' => 'phone number']))
+             ->see(trans('validation.required', ['attribute' => 'name']));
     }
 
     public function testRequestCallback()
