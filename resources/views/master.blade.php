@@ -31,8 +31,6 @@
 
 <body id="app-layout">
     <div class="container">
-        <img src='{{ url('/images/logo.jpg') }}'>
-        <br><br>
         @yield('content')
 
         <div id="footer">
