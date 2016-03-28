@@ -45,28 +45,32 @@
 <div class="services">
 	<img src="/images/spacer.png" height="80px"><br>
     <div class="row">
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Malware / Virus Removal
-            </div>
+        <div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+           			Malware / Virus Removal
+				</div>
+			</div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Regular PC/Network Health Checks
-            </div>
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+           			Regular PC/Network Health Checks
+	            </div>
+			</div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		A Secure & Functional Website
-            </div>
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+           			A Secure &amp; Functional Website
+				</div>
+			</div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Robust Disaster Recovery Plan
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+           			Robust Disaster Recovery Plan
+				</div>
             </div>
 	    </div>
     </div>
@@ -74,28 +78,32 @@
 	&nbsp;
     </div>
     <div class="row">
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Up-To_date Antivirus Software
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+	           		Up-To_date Antivirus Software
+				</div>
             </div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Staff Training
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+	           		Staff Training
+				</div>
             </div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		High Quality Backup System
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+	           		High Quality Backup System
+				</div>
             </div>
 	    </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-2 services-box">
-        	<div class="vcenter">
-           		Advice When Purchasing New Hardware
+		<div class="col-md-3">
+			<div class="services-box">
+				<div class="vcenter">
+	           		Advice When Purchasing New Hardware
+				</div>
             </div>
 	    </div>
     </div>
