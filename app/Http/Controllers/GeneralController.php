@@ -17,7 +17,7 @@ class GeneralController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/#callback')
+            return redirect('/#contact')
                     ->withErrors($validator)
                     ->withInput();
         }
@@ -32,7 +32,7 @@ class GeneralController extends Controller
             $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
               ->subject('Message from '.($request->name == '' ? 'anonymous' : $request->name));
         });
-        return redirect('/#callback')->with('message', $message);
+        return redirect('/#contact')->with('message', $message);
     }
 
     public function customerinfo()
