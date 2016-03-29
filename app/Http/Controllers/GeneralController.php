@@ -50,7 +50,7 @@ class GeneralController extends Controller
 
         $message = trans('customerinfo.success', ['name' => $request->name]);
         Mail::send('emails.customerinfo', ['request' => $request], function ($m) use ($request) {
-            $m->from($request->email, $request->name);
+            $m->from('mail@computerwhiz.com.au', 'Computer Whiz Mail');
             $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
               ->subject(trans('customerinfo.email-subject', ['name' => $request->name]));
         });
@@ -72,7 +72,7 @@ class GeneralController extends Controller
         $name = $request->first_name.' '.$request->last_name;
         $message = trans('booknow.success', ['name' => $name]);
         Mail::send('emails.booknow', ['request' => $request], function ($m) use ($request, $name) {
-            $m->from($request->email, $name);
+            $m->from('mail@computerwhiz.com.au', 'Computer Whiz Mail');
             $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
               ->subject(trans('booknow.email-subject', ['name' => $name]));
         });
