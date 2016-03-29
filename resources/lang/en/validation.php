@@ -89,8 +89,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'preferred_time' => [
+            'regex' => 'Please enter a valid time. It can be in either 12 or 24 hour format.',
         ],
     ],
 

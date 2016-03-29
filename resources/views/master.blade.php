@@ -30,6 +30,20 @@
 </head>
 
 <body id="app-layout">
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header navbar-brand">
+	        <img alt="Computer Whiz - Canberra" src="/images/logo-h.png" width="68" height="30">
+	    </div>
+		<div class="navbar-header navbar-right">
+			<a href="/booknow" class="navbar-link">
+		        <img alt="Book Now" src="/images/book_now.png" width="169" height="52">
+			</a>
+	    </div>
+	  </div>
+	</nav>
+
 	@yield('header')
     <div class="container">
         @yield('content')
