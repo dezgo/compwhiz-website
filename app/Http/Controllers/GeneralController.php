@@ -56,4 +56,26 @@ class GeneralController extends Controller
         });
         return redirect('/customerinfo')->with('message', $message);
     }
+
+    public function booknow(Request $request)
+    {
+        $this->validate($request, [
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'email' => 'email|required_without:phone_number',
+            'phone_number' => 'required_without:email|regex:/^[(\d][\d- )]{5,13}$/',
+            'preferred_date' => 'date',
+            'preferred_time' => ['regex:/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9] ?([aApP][mM])?$/'],
+
+        ]);
+
+        $name = $request->first_name.' '.$request->last_name;
+        $message = trans('booknow.success', ['name' => $name]);
+        Mail::send('emails.booknow', ['request' => $request], function ($m) use ($request, $name) {
+            $m->from($request->email, $name);
+            $m->to('mail@computerwhiz.com.au', 'Computer Whiz Mail')
+              ->subject(trans('booknow.email-subject', ['name' => $name]));
+        });
+        return redirect('/booknow')->with('message', $message);
+    }
 }

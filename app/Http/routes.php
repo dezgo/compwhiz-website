@@ -33,6 +33,11 @@ Route::group(['middleware' => ['web']], function () {
         return view('content/insightly');
     });
 
+    Route::get('/booknow', function () {
+        return view('content/booknow');
+    });
+    Route::post('/booknow', 'GeneralController@booknow');
+
     Route::get('/remote-support-help', function () {
         return view('content/remote-support-help');
     });
