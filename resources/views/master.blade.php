@@ -34,7 +34,9 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header navbar-brand">
-	        <img alt="Computer Whiz - Canberra" src="/images/logo-h.png" width="68" height="30">
+			<a href="/" class="navbar-link">
+		        <img alt="Computer Whiz - Canberra" src="/images/logo-h.png" width="68" height="30">
+			</a>
 	    </div>
 		<div class="navbar-header navbar-right">
 			<a href="/booknow" class="navbar-link">
