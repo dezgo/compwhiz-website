@@ -42,6 +42,11 @@ Route::group(['middleware' => ['web']], function () {
         return view('content/remote-support-help');
     });
 
+    Route::get('/support-info', function () {
+        $rates = [150, 140, 130];
+        return view('content/support-info', compact('rates'));
+    });
+
     // process customer contact request
     Route::post('/callback', 'GeneralController@callback');
 
