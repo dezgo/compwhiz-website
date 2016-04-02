@@ -26,6 +26,11 @@
     <title>Computer Whiz - Canberra</title>
     <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
     <link href="{{ url('/css/all.css') }}" rel="stylesheet">
+
+    @yield('head')
+</head>
+
+<body id="app-layout">
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,11 +41,7 @@
 	  ga('send', 'pageview');
 
 	</script>
-    @yield('head')
-</head>
-
-<body id="app-layout">
-
+	
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header navbar-brand">
