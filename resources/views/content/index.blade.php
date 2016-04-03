@@ -223,7 +223,7 @@
 <div class="contact">
 	<div class="container textMedium">
 		<img src="/images/spacer.png" height="60px"><br>
-		Location: Red Hill, ACT<br>
+		Location: <a class='contact' href='https://www.google.com.au/maps/place/Computer+Whiz+-+Canberra/@-35.3387677,148.8454586,10z/data=!3m1!4b1!4m2!3m1!1s0x6b17b47cd8e20085:0x8df60a2a3e0c88a3'>Red Hill, ACT</a><br>
 		<br>
 		<b>Email: <a class="contact" href="mailto:web@computerwhiz.com.au">web@computerwhiz.com.au</a><br>
 		<br>
@@ -355,60 +355,6 @@
 @endif
 	<img src="/images/spacer.png" height="40px"><br />
 </div>
-
-    <!-- <form class="form-horizontal"  name="insightly_web_to_lead" action="https://compwhiz.insight.ly/WebToLead/Create" method="post">
-        <input type="hidden" name="formId" value="ing2N5NnCbpS+aW0FxIRVQ=="/>
-        <input type="hidden" id="insightly_ResponsibleUser" name="ResponsibleUser" value="529776"/><br/>
-        <input type="hidden" id="insightly_LeadSource" name="LeadSource" value="898205"/><br/>
-
-        <div class="form-group">
-            <label for="insightly_firstName" class="col-sm-2 control-label">First Name: </label>
-            <div class="col-sm-8">
-                <input class="form-control" id="insightly_FirstName" name="FirstName" type="text"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="insightly_lastName" class="col-sm-2 control-label">Last Name: </label>
-            <div class="col-sm-8">
-                <input class="form-control" id="insightly_LastName" name="LastName" type="text"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="insightly_organization" class="col-sm-2 control-label">Organization: </label>
-            <div class="col-sm-8">
-                <input class="form-control" id="insightly_Organization" name="OrganizationName" type="text"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Email: </label>
-            <div class="col-sm-8">
-                <input class="form-control" id="insightly_Email" name="email" type="text"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="phone" class="col-sm-2 control-label">Phone: </label>
-            <div class="col-sm-8">
-                <input class="form-control" id="insightly_Phone" name="phone" type="text"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="phone" class="col-sm-2 control-label">Message: </label>
-            <div class="col-sm-8">
-                <textarea class="form-control" name="Description" id="insightly_Description" cols='30' rows='3'></textarea>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-8">
-                <input class="btn btn-default" type="submit" value="Submit"/>
-            </div>
-        </div>
-    </form> -->
 
 @stop
 
