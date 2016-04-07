@@ -9,3 +9,4 @@ Preferred Date: {{ $request->preferred_date }}<br />
 Preferred Time: {{ $request->preferred_time }}<br />
 Preferred Support Method: {{ $request->support_method }}<br />
 Message: {{ $request->message }}
+Voucher: {{ $request->voucher_code }}
