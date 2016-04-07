@@ -57,9 +57,22 @@ class GeneralController extends Controller
         return redirect('/customerinfo')->with('message', $message);
     }
 
+    private function checkVoucherCode($voucher_code)
+    {
+        if ($voucher_code == "")
+        {
+            return true;
+        }
+        else
+        {
+            $voucher = new \App\Voucher($voucher_code);
+            return $voucher->isValid();
+        }
+    }
+
     public function booknow(Request $request)
     {
-        $this->validate($request, [
+        $validator = \Validator::make($request->all(), [
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'email' => 'email|required_without:phone_number',
@@ -68,6 +81,18 @@ class GeneralController extends Controller
             'preferred_time' => ['regex:/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9] ?([aApP][mM])?$/'],
 
         ]);
+
+        $validator->after(function($validator) {
+            if (!$this->checkVoucherCode($validator->getData()['voucher_code'])) {
+                $validator->errors()->add('voucher_code', 'Invalid or expired voucher code used.');
+            }
+        });
+
+        if ($validator->fails()) {
+                    return redirect('booknow')
+                                ->withErrors($validator)
+                                ->withInput();
+                }
 
         $name = $request->first_name.' '.$request->last_name;
         $message = trans('booknow.success', ['name' => $name]);
