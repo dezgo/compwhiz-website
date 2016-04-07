@@ -152,6 +152,21 @@
             </div>
         </div>
 
+        <div class="row form-group{{ $errors->has('voucher_code') ? ' has-error' : '' }}">
+            <label for="preferred_time" class="col-md-3 control-label">Voucher Code</label>
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="voucher_code" id="voucher_code" value="{{ old('voucher_code') }}"
+                    placeholder="Voucher Code">
+
+                @if ($errors->has('voucher_code'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('voucher_code') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
+
         <div class="row form-group">
 			<div class="col-sm-offset-3 col-sm-4">
 				<button id="btnSubmit" type="submit" class="btn btn-success">Request a booking</button>
