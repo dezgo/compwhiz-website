@@ -34,7 +34,7 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header navbar-brand">
-	        <img alt="Computer Whiz - Canberra" src="/images/logo-h.png" width="68" height="30">
+	        <a href='/'><img alt="Computer Whiz - Canberra" src="/images/logo-h.png" width="68" height="30"></a>
 	    </div>
 		<ul class="nav navbar-nav navbar-right">
 			@if (!Auth::guest())

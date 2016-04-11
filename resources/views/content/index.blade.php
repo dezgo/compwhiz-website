@@ -26,16 +26,20 @@
 			</div>
 	        <div class="col-md-5" valign="top">
 	        <h1>Mission</h1>
-	        Hi, I'm Derek Gillett and I run Computer Whiz - Canberra. My goal is to provide a high-quality,
-	                timely, professional IT support services for small to medium sized businesses and home users in Canberra and Queanbeyan.<Br>
-	                <br>
-	                High-quality, because I have over 20 years experience in the I.T. field. I've run I.T. support
-	                businesses both locally and interstate as well as worked as an independent consultant, and with
-	                a large Canberra firm.<br>
-	                <br>
-	                And timely because prompt service is important. You have a business to run, and when things go
-	                amiss, you need to quickly get back up and running.<br>
-		<img src="/images/spacer.png" height="80px">
+	        Hi, I'm Derek Gillett and I run Computer Whiz - Canberra. My goal is to provide high-quality,
+            timely, professional I.T. support services for small to medium sized businesses and home
+			users in Canberra and Queanbeyan.<Br>
+            <br>
+            A few of the areas I can assist with include protection from data loss through correct
+			backup configuration, creating an impressive web presence with our website design,
+			hosting, and monitoring services, ad-hoc assistance with PC issues, and any other
+			areas you might be interested in exploring such as cloud migration or paperless office setup.<br />
+			<br>
+			Feel free to browse this website to find out more about the types of services
+			I can provide, then get in touch using the <a href="#contact">contact details</a>
+			below, or through the <a href="/booknow">Book Now link</a>.<br />
+			<br />
+		<img src="/images/spacer.png" height="100px">
 	        </div>
 	    </div>
 	</div>
@@ -194,15 +198,14 @@
 	        <div class="col-md-4">
 	            <h3>Remote support</h3>
 	            <p>
-	            <b><u>Want remote support now?</u></b>
-				Run the <a target="qs" href="http://get.teamviewer.com/computerwhiz_qs">
-	                    Computer Whiz - Canberra Quick Support module</a>, then give us a call
-	                    and we can login and take a look.
-	            </p>
+	            <b><u>Want remote support?</u></b></p>
+				<a class="btn btn-primary" role="button" target="qs" href="http://get.teamviewer.com/computerwhiz_qs">
+	                    Get Support Now</a>
+						<br /><br />
 	            <p>
-	            <b><u>Need help</u></b>
-	            You can <a href='/remote-support-help'>follow our instructions</a>
-	            </p>
+	            <b><u>Need help?</u></b></p>
+	            <a href='/remote-support-help'>Follow our instructions</a>
+	            
 				<iframe style="visibility:hidden;display:none" name="qs"></iframe>
 	        </div>
 	        <div class="col-md-1">&nbsp;</div>
