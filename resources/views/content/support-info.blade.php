@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.master')
 
 @section('content')
 <h1>Business Support Information Sheet</h1>
@@ -60,16 +60,5 @@ As at 31 March 2016<br />
 Based centrally in Red Hill, we can provide timely onsite support for issues where remote support is unavailable or impractical. Minimum charge 1 hour.<br />
 <br />
 Remote support charged in 15 minute increments. Option to allow unattended access, or ad-hoc access via a small downloaded file where permission is granted on the device being controlled.
-<Br />
-<h2>Fee Schedule*</h2>
-Support agreement: 1 hour / month paid yearly in advance at ad-hoc rate below. Includes up to 1 hour of remote support.<br />
-<Br />
-Ad-hoc hourly rate: ${{ $rates[0] * 1.1 }} / hour<br />
-Block of 10 hours: ${{ $rates[1] * 1.1 * 10 }} (${{ $rates[1] * 1.1 }} / hour)<br />
-Block of 20 hours: ${{ $rates[2] * 1.1 * 20 }} (${{ $rates[2] * 1.1 }} / hour)<br />
-<br />
-Note, block hours must be purchased in advance. If no hours credit remain, ad-hoc rate will be charged.<br />
-<br />
-* all rates inclusive of GST where applicable
 
 @stop

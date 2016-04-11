@@ -43,8 +43,7 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('/support-info', function () {
-        $rates = [150, 140, 130];
-        return view('content/support-info', compact('rates'));
+        return view('content/support-info');
     });
 
     // process customer contact request
@@ -52,4 +51,10 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/customerinfo', 'GeneralController@customerinfo');
     Route::post('/customerinfo', 'GeneralController@customerinfo_store');
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });

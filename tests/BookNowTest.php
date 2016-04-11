@@ -36,7 +36,6 @@ class BookNowTest extends TestCase
     {
         Mail::shouldReceive('send')->once()
             ->with('emails.booknow', m::on(function($data) {
-                // $this->assertContains('joe@bloggs.com', $data);
                 return true;
             }), m::on(function($closure) {
                 $message = m::mock('Illuminate\Mailer\Message');
@@ -47,7 +46,7 @@ class BookNowTest extends TestCase
                         ->with(trans('booknow.email-subject', ['name' => 'Joe Bloggs']))
                         ->andReturn(m::self());
                 $message->shouldReceive('from')
-                        ->with('joe@bloggs.com', 'Joe Bloggs')
+                        ->with('mail@computerwhiz.com.au', 'Computer Whiz Mail')
                         ->andReturn(m::self());
                 $closure($message);
                 return true;

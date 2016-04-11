@@ -30,7 +30,6 @@ class CustomerInfoTest extends TestCase
     {
         Mail::shouldReceive('send')->once()
             ->with('emails.customerinfo', m::on(function($data) {
-                // $this->assertContains('joe@bloggs.com', $data);
                 return true;
             }), m::on(function($closure) {
                 $message = m::mock('Illuminate\Mailer\Message');
@@ -41,7 +40,7 @@ class CustomerInfoTest extends TestCase
                         ->with(trans('customerinfo.email-subject', ['name' => 'Joe Bloggs']))
                         ->andReturn(m::self());
                 $message->shouldReceive('from')
-                        ->with('joe@bloggs.com', 'Joe Bloggs')
+                        ->with('mail@computerwhiz.com.au', 'Computer Whiz Mail')
                         ->andReturn(m::self());
                 $closure($message);
                 return true;
