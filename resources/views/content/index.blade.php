@@ -25,23 +25,59 @@
 				<img src="/images/spacer.png" height="80px"><br />
 			</div>
 	        <div class="col-md-5" valign="top">
-	        <h1>Mission</h1>
-	        Hi, I'm Derek Gillett and I run Computer Whiz - Canberra. My goal is to provide high-quality,
-            timely, professional I.T. support services for small to medium sized businesses and home
-			users in Canberra and Queanbeyan.<Br>
+	        <h1>Hi!</h1>
+	        I'm Derek Gillett, the owner of Computer Whiz - Canberra. My goal is
+			to provide an approachable, friendly, I.T. support service to home &amp;
+			business users in Canberra and Queanbeyan.<Br>
             <br>
-            A few of the areas I can assist with include protection from data loss through correct
-			backup configuration, creating an impressive web presence with our website design,
-			hosting, and monitoring services, ad-hoc assistance with PC issues, and any other
-			areas you might be interested in exploring such as cloud migration or paperless office setup.<br />
-			<br>
-			Feel free to browse this website to find out more about the types of services
-			I can provide, then get in touch using the <a href="#contact">contact details</a>
-			below, or through the <a href="/booknow">Book Now link</a>.<br />
+			<b>Dislike calling technical support?</b>
+			You're not alone. Lots of people feel nervous ringing that tech support
+			number, like when the internet just won't work. You want it sorted,
+			but you're worried you won't understand them when they tell you how
+			to fix it in their own special I.T. language. So call me instead!
+			You'll love the
+			difference some patience backed with decades of experience brings.<br />
+			<Br />
+			<b>Who are you anyway?</b>
+            Here's my background. I've been fascinated by computers since I got
+			my first Commodore 64 back in
+			the mid '80s. Since then I've spent LOTS of time with them. Subsequently
+			I know LOTS about them. I can build a PC from parts, install the
+			operating system, and install and configure all the software. I have
+			done programming, I know all about Excel and macros. I've developed
+			a cloud-based invoicing system (<a target="_blank" href="https://invoicingzen.com">
+			InvoicingZen.com</a> which I encourage you to check out!). I've worked
+			in the corporate world on huge systems like SAP, as a web developer,
+			a database developer, and many years as a consultant.<br />
 			<br />
-		<img src="/images/spacer.png" height="100px">
 	        </div>
 	    </div>
+		<div class="row">
+			<div class="col-md-12">
+				<b>I think I'll just spend the extra on a big I.T. support company</b>
+				If you are a big business who needs a team of technicians available
+				full time, then that's probably best - I'm just one guy. If that's
+				not you, please don't. You'll get a junior technician at a premium
+				price. You'll get lots of advice, but who's interests will it serve?
+				Maybe they'll suggest you pay a monthly fee to have a server. Do you
+				really need one? Or do they just want the recurring income stream?
+				Maybe they'll suggest a website / hosting plan - great idea! But
+				how reliable will it be? I provide a 99.99% uptime
+				guarantee, and monitoring in place to tell you immediately if
+				something on there changes, or it goes down. Will they offer that?
+				<br /><Br />
+				<b>This other guy looks like he'll be cheaper</b>
+				Just remember, you get what you pay for :)<br />
+				<br />
+				<b>Still Unsure?</b> That's understandable. Others have come to me with a healthy
+				level of skepticism and came away pleased with the experience.
+				<a target="_blank" href="https://www.google.com.au/maps/place/Computer+Whiz+-+Canberra/@-35.3387677,148.8454586,10z/data=!3m1!4b1!4m2!3m1!1s0x6b17b47cd8e20085:0x8df60a2a3e0c88a3"
+				>Have a look</a> at some reviews they have given.<br />
+				<Br />
+			<img src="/images/spacer.png" height="80px">
+
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -205,7 +241,7 @@
 	            <p>
 	            <b><u>Need help?</u></b></p>
 	            <a href='/remote-support-help'>Follow our instructions</a>
-	            
+
 				<iframe style="visibility:hidden;display:none" name="qs"></iframe>
 	        </div>
 	        <div class="col-md-1">&nbsp;</div>
