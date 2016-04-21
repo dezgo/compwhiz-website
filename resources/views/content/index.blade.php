@@ -67,7 +67,14 @@
 				something on there changes, or it goes down. Will they offer that?
 				<br /><Br />
 				<b>This other guy looks like he'll be cheaper</b>
-				Just remember, you get what you pay for :)<br />
+				Honestly, if you just want a bargain, please go with that other guy.
+				If you want quality at a reasonable price, I'm your man. I.T.
+				experience is hard to price. The same issue can take two different
+				people very different amounts of time to resolve. It all depends
+				on their level of experience and expertise. I charge an hourly
+				rate, but get things done quickly. Sometimes the right way isn't
+				the quickest way. In that case, I'll explain the benefits of
+				doing it right before we start.<br />
 				<br />
 				<b>Still Unsure?</b> That's understandable. Others have come to me with a healthy
 				level of skepticism and came away pleased with the experience.
