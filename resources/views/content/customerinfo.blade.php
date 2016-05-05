@@ -7,6 +7,20 @@
 <form class="form-horizontal" action="/customerinfo" method="post">
     {{ csrf_field() }}
 
+<h4 class="text-center">Contact Details</h4>
+
+    <div class="form-group{{ $errors->has('last_visit') ? ' has-error' : '' }}">
+      <label for="last_visit" class="col-sm-2 control-label">Date</label>
+      <div class="col-sm-8">
+          <input type="text" class="form-control" name="last_visit" id="last_visit" placeholder="e.g. 1 Jan 1957" value="{{ old('last_visit') == '' ? date('j M Y') : old('last_visit') }}">
+          @if ($errors->has('last_visit'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('last_visit') }}</strong>
+              </span>
+          @endif
+      </div>
+    </div>
+
     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
       <label for="name" class="col-sm-2 control-label">Name</label>
       <div class="col-sm-8">
@@ -31,6 +45,45 @@
       </div>
     </div>
 
+    <div class="form-group{{ $errors->has('referral_source') ? ' has-error' : '' }}">
+      <label for="referral_source" class="col-sm-2 control-label">Referral source</label>
+      <div class="col-sm-8">
+          <input type="text" class="form-control" name="referral_source" id="referral_source" placeholder="e.g. Chronicle, Adwords, Flyer, Recommendation" value="{{ old('device') }}">
+          @if ($errors->has('referral_source'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('referral_source') }}</strong>
+              </span>
+          @endif
+      </div>
+    </div>
+
+    <div class="form-group{{ $errors->has('visit_reason') ? ' has-error' : '' }}">
+      <label for="visit_reason" class="col-sm-2 control-label">Reason for visit</label>
+      <div class="col-sm-8">
+          <input type="text" class="form-control" name="visit_reason" id="visit_reason" placeholder="e.g. Remove malware / setup printer" value="{{ old('visit_reason') }}">
+          @if ($errors->has('visit_reason'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('visit_reason') }}</strong>
+              </span>
+          @endif
+      </div>
+    </div>
+
+<h4 class="text-center">Hardware</h4>
+
+
+  <div class="form-group{{ $errors->has('internet') ? ' has-error' : '' }}">
+    <label for="internet" class="col-sm-2 control-label">Internet</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" name="internet" id="internet" placeholder="e.g. Optus 4G dongle" value="{{ old('internet') }}">
+        @if ($errors->has('internet'))
+            <span class="help-block">
+                <strong>{{ $errors->first('internet') }}</strong>
+            </span>
+        @endif
+    </div>
+  </div>
+
   <div class="form-group{{ $errors->has('device') ? ' has-error' : '' }}">
     <label for="device" class="col-sm-2 control-label">Device</label>
     <div class="col-sm-8">
@@ -54,6 +107,32 @@
         @endif
     </div>
   </div>
+
+  <div class="form-group{{ $errors->has('printer') ? ' has-error' : '' }}">
+    <label for="printer" class="col-sm-2 control-label">Printer</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" name="printer" id="printer" placeholder="e.g. Canon MG4560" value="{{ old('printer') }}">
+        @if ($errors->has('printer'))
+            <span class="help-block">
+                <strong>{{ $errors->first('printer') }}</strong>
+            </span>
+        @endif
+    </div>
+  </div>
+
+    <div class="form-group{{ $errors->has('other_devices') ? ' has-error' : '' }}">
+      <label for="other_devices" class="col-sm-2 control-label">Other Devices used</label>
+      <div class="col-sm-8">
+          <input type="text" class="form-control" name="other_devices" id="other_devices" placeholder="e.g. iPhone, Android Tablet, Smart TV" value="{{ old('printer') }}">
+          @if ($errors->has('other_devices'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('other_devices') }}</strong>
+              </span>
+          @endif
+      </div>
+    </div>
+
+<h4 class="text-center">Software</h4>
 
   <div class="form-group{{ $errors->has('operating_system') ? ' has-error' : '' }}">
     <label for="operating_system" class="col-sm-2 control-label">Operating System</label>
@@ -103,6 +182,18 @@
     </div>
   </div>
 
+  <div class="form-group{{ $errors->has('office') ? ' has-error' : '' }}">
+    <label for="office" class="col-sm-2 control-label">Office</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" name="office" id="office" placeholder="e.g. Libreoffice (limited use of Word, doesn't use outlook at all)" value="{{ old('office') }}">
+        @if ($errors->has('office'))
+            <span class="help-block">
+                <strong>{{ $errors->first('office') }}</strong>
+            </span>
+        @endif
+    </div>
+  </div>
+
   <div class="form-group{{ $errors->has('backup') ? ' has-error' : '' }}">
     <label for="backup" class="col-sm-2 control-label">Backup</label>
     <div class="col-sm-8">
@@ -127,77 +218,18 @@
     </div>
   </div>
 
-  <div class="form-group{{ $errors->has('office') ? ' has-error' : '' }}">
-    <label for="office" class="col-sm-2 control-label">Office</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="office" id="office" placeholder="e.g. Libreoffice (limited use of Word, doesn't use outlook at all)" value="{{ old('office') }}">
-        @if ($errors->has('office'))
-            <span class="help-block">
-                <strong>{{ $errors->first('office') }}</strong>
-            </span>
-        @endif
-    </div>
-  </div>
 
-  <div class="form-group{{ $errors->has('other_info') ? ' has-error' : '' }}">
-    <label for="other_info" class="col-sm-2 control-label">Other Info</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="other_info" id="other_info" placeholder="e.g. Uses X software package" value="{{ old('other_info') }}">
-        @if ($errors->has('other_info'))
-            <span class="help-block">
-                <strong>{{ $errors->first('other_info') }}</strong>
-            </span>
-        @endif
+    <div class="form-group{{ $errors->has('other_info') ? ' has-error' : '' }}">
+      <label for="other_info" class="col-sm-2 control-label">Other</label>
+      <div class="col-sm-8">
+          <input type="text" class="form-control" name="other_info" id="other_info" placeholder="e.g. Uses X software package" value="{{ old('other_info') }}">
+          @if ($errors->has('other_info'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('other_info') }}</strong>
+              </span>
+          @endif
+      </div>
     </div>
-  </div>
-
-  <div class="form-group{{ $errors->has('internet') ? ' has-error' : '' }}">
-    <label for="internet" class="col-sm-2 control-label">Internet</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="internet" id="internet" placeholder="e.g. Optus 4G dongle" value="{{ old('internet') }}">
-        @if ($errors->has('internet'))
-            <span class="help-block">
-                <strong>{{ $errors->first('internet') }}</strong>
-            </span>
-        @endif
-    </div>
-  </div>
-
-  <div class="form-group{{ $errors->has('printer') ? ' has-error' : '' }}">
-    <label for="printer" class="col-sm-2 control-label">Printer</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="printer" id="printer" placeholder="e.g. Canon MG4560" value="{{ old('printer') }}">
-        @if ($errors->has('printer'))
-            <span class="help-block">
-                <strong>{{ $errors->first('printer') }}</strong>
-            </span>
-        @endif
-    </div>
-  </div>
-
-  <div class="form-group{{ $errors->has('last_visit') ? ' has-error' : '' }}">
-    <label for="last_visit" class="col-sm-2 control-label">Last Visit</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="last_visit" id="last_visit" placeholder="e.g. 1 Jan 1957" value="{{ old('last_visit') }}">
-        @if ($errors->has('last_visit'))
-            <span class="help-block">
-                <strong>{{ $errors->first('last_visit') }}</strong>
-            </span>
-        @endif
-    </div>
-  </div>
-
-  <div class="form-group{{ $errors->has('visit_reason') ? ' has-error' : '' }}">
-    <label for="visit_reason" class="col-sm-2 control-label">Reason for visit</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="visit_reason" id="visit_reason" placeholder="e.g. Remove malware / setup printer" value="{{ old('visit_reason') }}">
-        @if ($errors->has('visit_reason'))
-            <span class="help-block">
-                <strong>{{ $errors->first('visit_reason') }}</strong>
-            </span>
-        @endif
-    </div>
-  </div>
 
   <div class="form-group">
       <div class="col-sm-offset-2 col-sm-8">

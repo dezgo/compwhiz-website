@@ -52,4 +52,10 @@ class CustomerInfoTest extends TestCase
              ->press('btnSubmit')
              ->see(trans('customerinfo.success', ['name' => 'Joe Bloggs']));
     }
+
+    public function testShowTodaysDateForLastVisitByDefault()
+    {
+        $this->visit('/customerinfo')
+            ->see('placeholder="e.g. 1 Jan 1957" value="'.date('j M Y').'">');
+    }
 }
