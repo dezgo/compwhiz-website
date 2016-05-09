@@ -17,6 +17,7 @@ elixir(function(mix) {
     mix.styles([
         'bootstrap.min.css',
         'jquery-ui.min.css',
+        'font-awesome.css',
         'app.css',
     ]);
 

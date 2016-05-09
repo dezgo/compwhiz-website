@@ -49,9 +49,11 @@
 					</ul>
 				</li>
 			@endif
-			<a href="/booknow" class="navbar-link">
-		        <img alt="Book Now" src="/images/book_now.png" width="169" height="52">
-			</a>
+			<li class="navbar-link h4">
+				<a>
+					<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;02 6112 8025
+				</a>
+			</li>
 	    </ul>
 	  </div>
 	</nav>
